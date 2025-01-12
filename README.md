@@ -11,7 +11,8 @@ If you're new to it like me, what is Fabric ?
 Fabric offers a 60-day free trial, so let's create an account :
 https://www.microsoft.com/en-us/microsoft-fabric/getting-started
 
-![Architecture diagram](images/architecture_diagram.png)
+![Microsoft Fabric](images/ms_fabric.png)
+
 Fabric offers the following solutions :
 - Power BI: lets you easily connect to your data sources, visualize, and discover what's important, and share that with anyone or everyone you want.
 
