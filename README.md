@@ -171,6 +171,8 @@ Here is the final report :
 
 ![Manual Power BI report](images/manual-report.png) 
 
+You can find it the report folder of this repository.
+
 ## Data Fabric - Orchestrating the data processing 
 Now that we coded the data pipelines, and created the report that is directly connected to the data in our lakehouse, we can create a Data Factory pipeline to automate the data processing of new events and schedule it to run daily.
 
