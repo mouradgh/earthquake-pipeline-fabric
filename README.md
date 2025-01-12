@@ -60,7 +60,7 @@ Once created, click on New item, and select Lakehouse. You can call it earthquak
 This lakehouse will store the processed earthquake events data ingested from the API in raw format. 
 We will later process it downstream and store it as cleansed and reporting ready Delta format tables, which is the default format for tables in Fabric.
 
-![Architecture diagram](images/delta_lake.png) 
+![Delta Lake](images/delta_lake.png) 
 
 If you have never heard of the term lakehouse before, the lakehouse architecture combines the best features of data lakes and data warehouses : it stores both structured and unstructured data, and is optimized for both large scale data storage, and high performance BI analytics.
 
