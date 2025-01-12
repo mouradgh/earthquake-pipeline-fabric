@@ -1,5 +1,10 @@
 # Earthquake data pipeline using Microsoft Fabric
 
+In the ever-evolving landscape of data engineering, three clouds have long dominated the job market: GCP, AWS, and Azure.
+But yesterday, while doom-scrolling through LinkedIn job listings (as one does), I came across a job offer mentionning Microsoft Fabric. 
+My inner geek couldn't let that slide, so I had to dig deeper to know what this new technology was, and the best way to do that is through building a real project.
+Below are my notes when I took Microsoft Fabric for a test drive.
+
 ## Objective
 The objective of this project is to get hand-on exposure of Microsoft Fabric.
 It's a starting point before diving deeper into the Microsoft world.
