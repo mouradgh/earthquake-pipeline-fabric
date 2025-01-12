@@ -84,7 +84,7 @@ Link the notebook to the previously created lakehouse by clicking Lakehouses on 
 Make sure the language is PySpark.
 
 You can find this notebook, that extracts the data for a specific day and stores it as a json file, here :
-Notebooks/01 Worldwide Earthquake Events API - Bronze Layer Processing
+[Notebooks/01 Worldwide Earthquake Events API - Bronze Layer Processing](notebooks/01 Worldwide Earthquake Events API - Bronze Layer Processing.ipynb)
 
 ### Processing the data : Silver layer
 Go back to the workspace the create a new notebook, once again linking it to earthquakes_lakehouse.
