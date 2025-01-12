@@ -5,8 +5,10 @@ The objective of this project is to get hand-on exposure of Microsoft Fabric.
 It's a starting point before diving deeper into the Microsoft world.
 
 ## Setting up
-This project will be done in the Microsoft Fabric environment.
-If you're new to it like me, what is Fabric ?
+First of all, I have heard a lot about Microsoft Azure, but this is the first time I encounter Microsoft Fabric, so what is it ?
+
+Microsoft Fabric is Microsoft’s newest innovation into the BI Market place.
+It's an end-to-end analytics and data platform designed for enterprises that require a unified solution and encompasses everything you need from data movement, processing, ingestion, transformation, real-time event routing, and report building.
 
 Fabric offers a 60-day free trial, so let's create an account [here](https://www.microsoft.com/en-us/microsoft-fabric/getting-started).
 
