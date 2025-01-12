@@ -49,4 +49,4 @@ Once the Data Engineering notebooks are created, I will use Data Factory to orch
 I will create a Power BI report to show the worldwide earthquake data events.
 
 ![Architecture diagram](images/architecture_diagram.png) 
-_Diagram created using [Excalidraw]
+_Diagram created using [Excalidraw](https://excalidraw.com/)._
