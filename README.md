@@ -187,3 +187,8 @@ You can then go the Home tab and click on Schedule to run on specific frequency.
 For this project we want it to run daily.
 
 ![Automation](images/automation.png) 
+
+## Debrief 
+This project was useful to get an insight of the Microsoft Fabric universe.
+The user experience have been pleasent, I found everything fairly easy to use, and it's nice to have all you need in one place.
+This was only scratching the surface, I can't wait to explore Data Fabric more.
