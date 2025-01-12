@@ -84,7 +84,7 @@ Link the notebook to the previously created lakehouse by clicking Lakehouses on 
 Make sure the language is PySpark.
 
 You can find this notebook, that extracts the data for a specific day and stores it as a json file, here :
-[Notebooks/01 Worldwide Earthquake Events API - Bronze Layer Processing](notebooks/01 Worldwide Earthquake Events API - Bronze Layer Processing.ipynb)
+[Notebooks/01 Worldwide Earthquake Events API - Bronze Layer Processing](https://github.com/mouradgh/earthquake-pipeline-fabric/blob/main/notebooks/01%20Worldwide%20Earthquake%20Events%20API%20-%20Bronze%20Layer%20Processing.ipynb)
 
 ### Processing the data : Silver layer
 Go back to the workspace the create a new notebook, once again linking it to earthquakes_lakehouse.
@@ -109,7 +109,7 @@ df.write.mode('append').saveAsTable('earthquake_events_silver')
 ```
 
 You can find this notebook, that processes the data and stores it in a table here :
-Notebooks/02 Worldwide Earthquake Events API - Silver Layer Processing
+[Notebooks/02 Worldwide Earthquake Events API - Silver Layer Processing](https://github.com/mouradgh/earthquake-pipeline-fabric/blob/main/notebooks/02%20Worldwide%20Earthquake%20Events%20API%20-%20Silver%20Layer%20Processing.ipynb)
 
 ### Getting the data ready for reporting : Silver layer
 By now we know the drill, create a new notebook and attach it to the lakehouse.
@@ -149,7 +149,7 @@ df_with_location_sig_class.write.mode('append').saveAsTable('earthquake_events_g
 ```
 
 You can find this notebook, that processes the data and stores it in a table here :
-Notebooks/03 Worldwide Earthquake Events API - Gold Layer Processing
+[Notebooks/03 Worldwide Earthquake Events API - Gold Layer Processing](https://github.com/mouradgh/earthquake-pipeline-fabric/blob/main/notebooks/03%20Worldwide%20Earthquake%20Events%20API%20-%20Gold%20Layer%20Processing.ipynb)
 
 ### Creating the Power BI report
 The semantic model that was automatically created, can be loaded directly into Power BI without having to query a lakehouse or an SQL endoint. 
