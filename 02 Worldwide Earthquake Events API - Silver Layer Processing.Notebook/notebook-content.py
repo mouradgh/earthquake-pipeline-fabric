@@ -87,7 +87,7 @@ df = df.\
 
 # CELL ********************
 
-# appending the data to the gold table
+# appending the data to the silver table
 df.write.mode('append').saveAsTable('earthquake_events_silver')
 
 # METADATA ********************

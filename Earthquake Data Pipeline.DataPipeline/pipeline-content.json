@@ -2,10 +2,21 @@
   "properties": {
     "activities": [
       {
+        "name": "Bronze notebook",
         "type": "TridentNotebook",
+        "state": "Inactive",
+        "onInactiveMarkAs": "Succeeded",
+        "dependsOn": [],
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureOutput": false,
+          "secureInput": false
+        },
         "typeProperties": {
-          "notebookId": "979a75cf-9af7-4fe4-bc54-30b93af89dae",
-          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "notebookId": "35fff005-010a-4f2f-9221-ffbe82dca6e0",
+          "workspaceId": "f0670072-f290-4e5d-8df6-05be9af6ba48",
           "parameters": {
             "start_date": {
               "value": {
@@ -22,37 +33,13 @@
               "type": "string"
             }
           }
-        },
-        "policy": {
-          "timeout": "0.12:00:00",
-          "retry": 0,
-          "retryIntervalInSeconds": 30,
-          "secureInput": false,
-          "secureOutput": false
-        },
-        "name": "Bronze notebook",
-        "dependsOn": []
+        }
       },
       {
-        "type": "TridentNotebook",
-        "typeProperties": {
-          "notebookId": "a5722c4a-12db-4711-9598-239cc2bc666b",
-          "workspaceId": "00000000-0000-0000-0000-000000000000",
-          "parameters": {
-            "start_date": {
-              "value": "@formatDateTime(adddays(utcNow(), -1), 'yyyy-MM-dd')",
-              "type": "string"
-            }
-          }
-        },
-        "policy": {
-          "timeout": "0.12:00:00",
-          "retry": 0,
-          "retryIntervalInSeconds": 30,
-          "secureInput": false,
-          "secureOutput": false
-        },
         "name": "Silver Notebook",
+        "type": "TridentNotebook",
+        "state": "Inactive",
+        "onInactiveMarkAs": "Succeeded",
         "dependsOn": [
           {
             "activity": "Bronze notebook",
@@ -60,28 +47,33 @@
               "Succeeded"
             ]
           }
-        ]
-      },
-      {
-        "type": "TridentNotebook",
-        "typeProperties": {
-          "notebookId": "41f1bd70-b8db-4830-b1ff-a3b850967899",
-          "workspaceId": "00000000-0000-0000-0000-000000000000",
-          "parameters": {
-            "start_date": {
-              "value": "@formatDateTime(adddays(utcNow(), -1), 'yyyy-MM-dd')",
-              "type": "string"
-            }
-          }
-        },
+        ],
         "policy": {
           "timeout": "0.12:00:00",
           "retry": 0,
           "retryIntervalInSeconds": 30,
-          "secureInput": false,
-          "secureOutput": false
+          "secureOutput": false,
+          "secureInput": false
         },
+        "typeProperties": {
+          "notebookId": "b4d4d243-b124-4419-886d-4b6a8f8a2e7b",
+          "workspaceId": "f0670072-f290-4e5d-8df6-05be9af6ba48",
+          "parameters": {
+            "start_date": {
+              "value": {
+                "value": "@formatDateTime(adddays(utcNow(), -1), 'yyyy-MM-dd')",
+                "type": "Expression"
+              },
+              "type": "string"
+            }
+          }
+        }
+      },
+      {
         "name": "Gold Notebook",
+        "type": "TridentNotebook",
+        "state": "Inactive",
+        "onInactiveMarkAs": "Succeeded",
         "dependsOn": [
           {
             "activity": "Silver Notebook",
@@ -89,7 +81,60 @@
               "Succeeded"
             ]
           }
-        ]
+        ],
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "typeProperties": {
+          "notebookId": "6cc8c091-90c9-4e22-aee4-a1e02767b354",
+          "workspaceId": "f0670072-f290-4e5d-8df6-05be9af6ba48",
+          "parameters": {
+            "start_date": {
+              "value": {
+                "value": "@formatDateTime(adddays(utcNow(), -1), 'yyyy-MM-dd')",
+                "type": "Expression"
+              },
+              "type": "string"
+            }
+          }
+        }
+      },
+      {
+        "name": "Stored procedure1",
+        "type": "SqlServerStoredProcedure",
+        "dependsOn": [],
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "typeProperties": {
+          "storedProcedureName": "[dbo].[sp_Test]",
+          "storedProcedureParameters": {
+            "number": {
+              "value": "5",
+              "type": "Int16"
+            }
+          }
+        },
+        "linkedService": {
+          "name": "earthquake",
+          "properties": {
+            "annotations": [],
+            "type": "DataWarehouse",
+            "typeProperties": {
+              "endpoint": "x3qjnui7befuvlcpwiyiwfkmju-oiagp4eq6jou5dpwaw7jv5v2ja.datawarehouse.fabric.microsoft.com",
+              "artifactId": "8ae6d286-898b-46db-8f3a-81a4ddf63d73",
+              "workspaceId": "f0670072-f290-4e5d-8df6-05be9af6ba48"
+            }
+          }
+        }
       }
     ],
     "variables": {
